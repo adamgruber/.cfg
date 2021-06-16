@@ -1,11 +1,11 @@
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [user]
-	email = talknmime@gmail.com
-	name = Adam Gruber
+  email = talknmime@gmail.com
+  name = Adam Gruber
 [core]
   quotepath = false
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore
 [color]
   ui = true
 [alias]
@@ -52,5 +52,6 @@
   pub = "!git push -u origin $(git branch | grep \\* | cut -d ' ' -f2)"
 
 [pager]
-	diff = false
-	stash = false
+  diff = false
+  stash = false
+  log = false

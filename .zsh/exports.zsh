@@ -1,5 +1,9 @@
 # Currently this path is appendend to dynamically when picking a ruby version
-export PATH=/opt/local/bin:/opt/local/sbin:node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:~/.local/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=~/.local/bin:$PATH
+
+# Support manually changing npm's default directory
+export PATH=~/.npm-global/bin:$PATH
 
 # Setup terminal, and turn on colors
 export TERM=xterm-256color

@@ -3,6 +3,7 @@ alias g=git
 alias ls='ls -GFh' # Colorize output, add file type indicator, and put sizes in human readable format
 alias ll='ls -GFhl' # Same as above, but in long listing format
 alias lh='ls -d .*' # Hidden files/directories only
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME' # Manage dotfiles
 
 # npm commands
 alias npms='cat package.json | jq .scripts'

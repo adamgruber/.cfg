@@ -5,6 +5,9 @@ export PATH=~/.local/bin:$PATH
 # Support manually changing npm's default directory
 export PATH=~/.npm-global/bin:$PATH
 
+# Add Sublime bin to path
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
 export CLICOLOR=1

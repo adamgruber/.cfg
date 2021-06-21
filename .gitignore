@@ -1,3 +1,4 @@
+# Mac files
 *.DS_Store
 .AppleDouble
 .LSOverride
@@ -72,3 +73,27 @@ node_modules
 
 # Dotfiles directory
 .cfg
+
+# Vim temp files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Sublime text files
+*.sublime-project
+*.sublime-workspace
+
+# IDEA files
+*.iml
+*.ipr
+.idea
+
+# VS Code files
+.vscode
+
+# Backend files
+.settings
+.project

@@ -8,6 +8,10 @@ export PATH=~/.npm-global/bin:$PATH
 # Add Sublime bin to path
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
+# n node package manager
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
+
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
 export CLICOLOR=1

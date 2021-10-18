@@ -1,11 +1,12 @@
 [credential]
   helper = osxkeychain
 [user]
-  email = talknmime@gmail.com
+  email = agruber@getguru.com
   name = Adam Gruber
 [core]
   quotepath = false
   excludesfile = ~/.gitignore
+  pager = cat
 [color]
   ui = true
 [alias]
@@ -22,26 +23,28 @@
   pr = pull --rebase
   pod = pull origin develop
   prod = pull --rebase origin develop
+  prom = pull --rebase origin master
+  ds = diff --staged
 
   #list commands
   le = log --oneline --decorate
-    ll = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
-    ls1 = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
-    lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=short --graph
-    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=relative
-    lc  = "!f() { git ll "$1"^.."$1"; }; f"
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-    #list all aliases
-    la = "!git config -l | grep alias | cut -c 7-"
+  ll = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
+  ls1 = log --pretty=format:"%C(yellow)%h%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
+  lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=short --graph
+  ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%C(white)%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=relative
+  lc  = "!f() { git ll "$1"^.."$1"; }; f"
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  #list all aliases
+  la = "!git config -l | grep alias | cut -c 7-"
 
-    #stash
-    sl = stash list
-    sa = stash apply
-    ss = stash save
-    sp = stash pop
-    sh = !sh -c 'git stash show stash@{$1}' -
-    shp = !sh -c 'git stash show stash@{$1} -p' -
-    sd = !sh -c 'git stash drop stash@{$1}' -
+  #stash
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+  sp = stash pop
+  sh = !sh -c 'git stash show stash@{$1}' -
+  shp = !sh -c 'git stash show stash@{$1} -p' -
+  sd = !sh -c 'git stash drop stash@{$1}' -
 
   # show changes since last tag
   tagchanges = !git ls `git lasttag`...
@@ -50,10 +53,5 @@
 
   # publish current branch to origin
   pub = "!git push -u origin $(git branch | grep \\* | cut -d ' ' -f2)"
-
-[pager]
-  diff = false
-  stash = false
-  log = false
 [pull]
   rebase = false

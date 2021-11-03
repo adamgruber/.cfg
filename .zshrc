@@ -12,7 +12,8 @@ source ~/.zsh/zsh_hooks.zsh
 source ~/.zsh/zplug.zsh
 
 # Ruby
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 export PATH=bin:script:~/.bin:$PATH
 
 # if [ $ITERM_SESSION_ID ]; then

@@ -16,6 +16,11 @@ source ~/.zsh/zplug.zsh
 
 export PATH=bin:script:~/.bin:$PATH
 
+# Add Homebrew to PATH on Apple Silicon
+if [[ "$(uname -m)" == "arm64" ]]; then
+  export PATH="/opt/homebrew/bin:${PATH}"
+fi
+
 # if [ $ITERM_SESSION_ID ]; then
 #   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 # fi

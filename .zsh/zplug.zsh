@@ -1,4 +1,10 @@
-source $HOME/.zplug/init.zsh
+# Handle loading on Apple Silicon
+if [[ "$(uname -m)" == "arm64" ]]; then  
+  export ZPLUG_HOME=/opt/homebrew/opt/zplug
+  source $ZPLUG_HOME/init.zsh
+else
+  source $HOME/.zplug/init.zsh
+fi
 
 # Feature rich syntax highlighting
 # https://github.com/zdharma-continuum/fast-syntax-highlighting
